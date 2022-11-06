@@ -1,0 +1,27 @@
+--Created a table for shoe store---
+
+CREATE TABLE shoes (id INTEGER PRIMARY KEY, name text, size INTEGER, quantity INTEGER, price INTEGER);
+
+INSERT INTO shoes VALUES (1, "Air Jordan", 12, 1, 175);
+INSERT INTO shoes Values (2, "Addidas", 10, 1, 70);
+INSERT INTO shoes VALUES (3, "Nike Swoopes", 11, 2, 89);
+INSERT INTO shoes VALUES (4, "Puma Hoops", 12, 3, 110);
+INSERT INTO shoes VALUES (5, "Nike Greeks", 12, 2, 120);
+INSERT INTO shoes VALUES (6, "Zumba", 9, 4, 65); 
+INSERT INTO shoes VALUES (7, "Iverson", 10, 1, 100);
+INSERT INTO shoes VALUES (8, "Curry", 13, 2, 110);
+INSERT INTO shoes VALUES (9, "Lebron", 11, 1, 40);
+INSERT INTO shoes VALUES (10, "Nike Track", 8, 1, 50);
+INSERT INTO shoes VALUES (11, "Nike KD", 14, 2, 135);
+INSERT INTO shoes VALUES (12, "Zion", 11, 3, 120);
+INSERT INTO shoes VALUES (13, "Puma Clyd", 12, 6, 110);
+INSERT INTO shoes VALUES (14, "Way of Wade", 13, 4, 115);
+INSERT INTO shoes VALUES (15, "Charles Hoops", 12, 2, 200);
+
+
+--display the database order by price.
+SELECT * FROM shoes WHERE price >= 100 ORDER BY price asc;
+
+
+--what is the total number of shoes in stock?
+SELECT SUM(quantity) FROM shoes;
